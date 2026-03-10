@@ -162,7 +162,7 @@ export const games: Game[] = [
     id: "mini-game-slice-of-zen",
     name: "Mini Game: Slice of Zen",
     slug: "mini-game-slice-of-zen",
-    iframeUrl: "https://st.8games.net/7/mini-igra-kusochek-dzena/",
+    iframeUrl: "/games/mini-game-slice-of-zen.html",
     category: "puzzle",
     coverUrl: sliceOfZenImg,
     description: "Play Slice of Zen free online — a calming puzzle game where precision cuts create harmony. Make careful slices to solve each zen-inspired level. This free relaxing slicing game is perfect for unwinding while exercising your brain. Find your inner peace through the art of cutting!",
