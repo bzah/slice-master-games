@@ -297,7 +297,7 @@ export const games: Game[] = [
     id: "beat-slash",
     name: "Beat Slash",
     slug: "beat-slash",
-    iframeUrl: "https://st.8games.net/10/igra-bit-slesh/",
+    iframeUrl: "/games/beat-slash.html",
     category: "ninja-action",
     coverUrl: beatSlashImg,
     description: "Play Beat Slash free online — slash to the rhythm in this music-powered slicing game! Combine musical beats with sword strikes to cut through obstacles. This unique free rhythm action game blends music gameplay with satisfying blade mechanics. Feel the beat and slash!",
