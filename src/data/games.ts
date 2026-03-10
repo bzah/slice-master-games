@@ -324,7 +324,7 @@ export const games: Game[] = [
     id: "bear-fruit-slice",
     name: "Bear Fruit Slice",
     slug: "bear-fruit-slice",
-    iframeUrl: "https://st.8games.net/lib/ruffle/?game=https://st.8games.net/igra_medvedj_reget_fruktu.swf",
+    iframeUrl: "/games/bear-fruit-slice.html",
     category: "fruit-slicing",
     coverUrl: bearFruitImg,
     description: "Play Bear Fruit Slice free online — help an adorable bear slice flying fruits! Cut through watermelons, oranges, and apples as the cute bear character. This charming free fruit cutting game is perfect for younger players and fruit slicing fans. Play free and unblocked!",
