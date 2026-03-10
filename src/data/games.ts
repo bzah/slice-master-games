@@ -135,7 +135,7 @@ export const games: Game[] = [
     id: "halloween-fruit-slice",
     name: "Halloween Fruit Slice",
     slug: "halloween-fruit-slice",
-    iframeUrl: "https://st.8games.net/12/8g/igra-fruktovaya-dolka-na-khellouin",
+    iframeUrl: "/games/halloween-fruit-slice.html",
     category: "fruit-slicing",
     coverUrl: halloweenFruitImg,
     description: "Play Halloween Fruit Slice free online — a spooky twist on classic fruit cutting! Slice pumpkins, haunted fruits, and Halloween-themed treats in this seasonal free slicing game. Enjoy festive graphics and satisfying blade action as you carve your way through spooky levels.",
