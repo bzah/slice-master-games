@@ -47,6 +47,31 @@ type TranslationKeys = {
   send: string;
   name_label: string;
   subject_label: string;
+  how_to_play: string;
+  how_to_play_step1: string;
+  how_to_play_step2: string;
+  how_to_play_step3: string;
+  how_to_play_step4: string;
+  game_features: string;
+  feature_free: string;
+  feature_no_download: string;
+  feature_mobile: string;
+  feature_fullscreen: string;
+  feature_unblocked: string;
+  feature_instant: string;
+  tips_and_tricks: string;
+  tip_1: string;
+  tip_2: string;
+  tip_3: string;
+  tip_4: string;
+  faq_how_play_q: string;
+  faq_how_play_a: string;
+  faq_save_q: string;
+  faq_save_a: string;
+  faq_safe_q: string;
+  faq_safe_a: string;
+  why_play: string;
+  about_game: string;
 };
 
 export const translations: Record<Language, TranslationKeys> = {
@@ -86,6 +111,31 @@ export const translations: Record<Language, TranslationKeys> = {
     send: "Send",
     name_label: "Name",
     subject_label: "Subject",
+    how_to_play: "How to Play",
+    how_to_play_step1: "Click or tap the play area to start the game",
+    how_to_play_step2: "Swipe or click to slice through objects with precision timing",
+    how_to_play_step3: "Avoid obstacles and aim for bonus targets to maximize your score",
+    how_to_play_step4: "Complete levels to unlock new challenges and achievements",
+    game_features: "Game Features",
+    feature_free: "100% free to play — no hidden costs or subscriptions",
+    feature_no_download: "No download required — play instantly in your browser",
+    feature_mobile: "Mobile-friendly with responsive touch controls",
+    feature_fullscreen: "Fullscreen mode for immersive gaming experience",
+    feature_unblocked: "Unblocked — play at school, work, or anywhere",
+    feature_instant: "Instant loading with no registration needed",
+    tips_and_tricks: "Tips & Tricks",
+    tip_1: "Time your cuts carefully — precision matters more than speed",
+    tip_2: "Watch for patterns in object movements to plan your slices",
+    tip_3: "Focus on combo multipliers for higher scores",
+    tip_4: "Practice on earlier levels to master the controls before harder stages",
+    faq_how_play_q: "How do I play this game?",
+    faq_how_play_a: "Simply click or tap to start, then use mouse clicks or touch gestures to slice through objects. Each game has unique mechanics — check the in-game tutorial for specific controls.",
+    faq_save_q: "Can I save my progress?",
+    faq_save_a: "Most games on Slice Master automatically save your progress in your browser. Just come back anytime and continue where you left off.",
+    faq_safe_q: "Is this game safe for kids?",
+    faq_safe_a: "Yes, all games on Slice Master are family-friendly and safe for players of all ages. We carefully curate our game collection to ensure appropriate content.",
+    why_play: "Why Play on Slice Master?",
+    about_game: "About This Game",
   },
   es: {
     site_title: "Slice Master - Juegos de Cortar Gratis Online",
@@ -123,6 +173,31 @@ export const translations: Record<Language, TranslationKeys> = {
     send: "Enviar",
     name_label: "Nombre",
     subject_label: "Asunto",
+    how_to_play: "Cómo Jugar",
+    how_to_play_step1: "Haz clic o toca el área de juego para comenzar",
+    how_to_play_step2: "Desliza o haz clic para cortar objetos con precisión",
+    how_to_play_step3: "Evita obstáculos y apunta a objetivos bonus para maximizar tu puntuación",
+    how_to_play_step4: "Completa niveles para desbloquear nuevos desafíos y logros",
+    game_features: "Características del Juego",
+    feature_free: "100% gratis — sin costos ocultos ni suscripciones",
+    feature_no_download: "Sin descarga — juega instantáneamente en tu navegador",
+    feature_mobile: "Compatible con móviles con controles táctiles responsivos",
+    feature_fullscreen: "Modo pantalla completa para una experiencia inmersiva",
+    feature_unblocked: "Desbloqueado — juega en la escuela, trabajo o donde sea",
+    feature_instant: "Carga instantánea sin registro necesario",
+    tips_and_tricks: "Consejos y Trucos",
+    tip_1: "Cronometra tus cortes con cuidado — la precisión importa más que la velocidad",
+    tip_2: "Observa los patrones de movimiento para planificar tus cortes",
+    tip_3: "Enfócate en multiplicadores de combo para puntuaciones más altas",
+    tip_4: "Practica en los niveles iniciales para dominar los controles",
+    faq_how_play_q: "¿Cómo juego este juego?",
+    faq_how_play_a: "Simplemente haz clic o toca para comenzar, luego usa clics del ratón o gestos táctiles para cortar objetos. Cada juego tiene mecánicas únicas.",
+    faq_save_q: "¿Puedo guardar mi progreso?",
+    faq_save_a: "La mayoría de los juegos guardan automáticamente tu progreso en tu navegador. Vuelve cuando quieras y continúa donde lo dejaste.",
+    faq_safe_q: "¿Es este juego seguro para niños?",
+    faq_safe_a: "Sí, todos los juegos en Slice Master son aptos para familias y seguros para jugadores de todas las edades.",
+    why_play: "¿Por Qué Jugar en Slice Master?",
+    about_game: "Sobre Este Juego",
   },
   fr: {
     site_title: "Slice Master - Jeux de Découpe Gratuits en Ligne",
@@ -160,6 +235,31 @@ export const translations: Record<Language, TranslationKeys> = {
     send: "Envoyer",
     name_label: "Nom",
     subject_label: "Sujet",
+    how_to_play: "Comment Jouer",
+    how_to_play_step1: "Cliquez ou touchez la zone de jeu pour commencer",
+    how_to_play_step2: "Glissez ou cliquez pour trancher les objets avec précision",
+    how_to_play_step3: "Évitez les obstacles et visez les cibles bonus pour maximiser votre score",
+    how_to_play_step4: "Complétez les niveaux pour débloquer de nouveaux défis",
+    game_features: "Caractéristiques du Jeu",
+    feature_free: "100% gratuit — aucun coût caché ni abonnement",
+    feature_no_download: "Aucun téléchargement — jouez instantanément dans votre navigateur",
+    feature_mobile: "Compatible mobile avec des contrôles tactiles réactifs",
+    feature_fullscreen: "Mode plein écran pour une expérience de jeu immersive",
+    feature_unblocked: "Débloqué — jouez à l'école, au travail ou n'importe où",
+    feature_instant: "Chargement instantané sans inscription",
+    tips_and_tricks: "Astuces et Conseils",
+    tip_1: "Chronométrez vos coupes avec soin — la précision compte plus que la vitesse",
+    tip_2: "Observez les schémas de mouvement pour planifier vos coupes",
+    tip_3: "Concentrez-vous sur les multiplicateurs de combo pour des scores plus élevés",
+    tip_4: "Entraînez-vous sur les premiers niveaux pour maîtriser les contrôles",
+    faq_how_play_q: "Comment jouer à ce jeu ?",
+    faq_how_play_a: "Cliquez ou touchez pour commencer, puis utilisez les clics de souris ou les gestes tactiles pour trancher les objets. Chaque jeu a des mécaniques uniques.",
+    faq_save_q: "Puis-je sauvegarder ma progression ?",
+    faq_save_a: "La plupart des jeux sauvegardent automatiquement votre progression dans votre navigateur. Revenez quand vous voulez.",
+    faq_safe_q: "Ce jeu est-il sûr pour les enfants ?",
+    faq_safe_a: "Oui, tous les jeux sur Slice Master sont adaptés aux familles et sûrs pour les joueurs de tous âges.",
+    why_play: "Pourquoi Jouer sur Slice Master ?",
+    about_game: "À Propos de Ce Jeu",
   },
   de: {
     site_title: "Slice Master - Kostenlose Online-Schneidespiele",
@@ -197,6 +297,31 @@ export const translations: Record<Language, TranslationKeys> = {
     send: "Senden",
     name_label: "Name",
     subject_label: "Betreff",
+    how_to_play: "So Spielst Du",
+    how_to_play_step1: "Klicke oder tippe auf den Spielbereich, um zu starten",
+    how_to_play_step2: "Wische oder klicke, um Objekte präzise zu schneiden",
+    how_to_play_step3: "Weiche Hindernissen aus und ziele auf Bonusziele für maximale Punktzahl",
+    how_to_play_step4: "Schließe Level ab, um neue Herausforderungen freizuschalten",
+    game_features: "Spielfunktionen",
+    feature_free: "100% kostenlos — keine versteckten Kosten oder Abonnements",
+    feature_no_download: "Kein Download nötig — sofort im Browser spielen",
+    feature_mobile: "Mobilfreundlich mit responsiven Touch-Steuerungen",
+    feature_fullscreen: "Vollbildmodus für immersives Spielerlebnis",
+    feature_unblocked: "Entsperrt — spiele in der Schule, bei der Arbeit oder überall",
+    feature_instant: "Sofortiges Laden ohne Registrierung",
+    tips_and_tricks: "Tipps & Tricks",
+    tip_1: "Time deine Schnitte sorgfältig — Präzision ist wichtiger als Geschwindigkeit",
+    tip_2: "Beobachte Bewegungsmuster, um deine Schnitte zu planen",
+    tip_3: "Konzentriere dich auf Combo-Multiplikatoren für höhere Punktzahlen",
+    tip_4: "Übe in früheren Leveln, um die Steuerung zu beherrschen",
+    faq_how_play_q: "Wie spiele ich dieses Spiel?",
+    faq_how_play_a: "Klicke oder tippe einfach zum Starten und verwende dann Mausklicks oder Touch-Gesten zum Schneiden. Jedes Spiel hat einzigartige Mechaniken.",
+    faq_save_q: "Kann ich meinen Fortschritt speichern?",
+    faq_save_a: "Die meisten Spiele speichern deinen Fortschritt automatisch im Browser. Komm jederzeit zurück und mach dort weiter, wo du aufgehört hast.",
+    faq_safe_q: "Ist dieses Spiel sicher für Kinder?",
+    faq_safe_a: "Ja, alle Spiele auf Slice Master sind familienfreundlich und sicher für Spieler jeden Alters.",
+    why_play: "Warum auf Slice Master Spielen?",
+    about_game: "Über Dieses Spiel",
   },
   it: {
     site_title: "Slice Master - Giochi di Taglio Gratuiti Online",
@@ -234,6 +359,31 @@ export const translations: Record<Language, TranslationKeys> = {
     send: "Invia",
     name_label: "Nome",
     subject_label: "Oggetto",
+    how_to_play: "Come Giocare",
+    how_to_play_step1: "Clicca o tocca l'area di gioco per iniziare",
+    how_to_play_step2: "Scorri o clicca per tagliare gli oggetti con precisione",
+    how_to_play_step3: "Evita gli ostacoli e mira ai bersagli bonus per massimizzare il punteggio",
+    how_to_play_step4: "Completa i livelli per sbloccare nuove sfide e traguardi",
+    game_features: "Caratteristiche del Gioco",
+    feature_free: "100% gratuito — nessun costo nascosto o abbonamento",
+    feature_no_download: "Nessun download — gioca istantaneamente nel browser",
+    feature_mobile: "Compatibile con dispositivi mobili con controlli touch reattivi",
+    feature_fullscreen: "Modalità schermo intero per un'esperienza di gioco immersiva",
+    feature_unblocked: "Sbloccato — gioca a scuola, al lavoro o ovunque",
+    feature_instant: "Caricamento istantaneo senza registrazione",
+    tips_and_tricks: "Suggerimenti e Trucchi",
+    tip_1: "Cronometra i tuoi tagli con attenzione — la precisione conta più della velocità",
+    tip_2: "Osserva i modelli di movimento per pianificare i tuoi tagli",
+    tip_3: "Concentrati sui moltiplicatori combo per punteggi più alti",
+    tip_4: "Esercitati nei livelli iniziali per padroneggiare i controlli",
+    faq_how_play_q: "Come gioco a questo gioco?",
+    faq_how_play_a: "Clicca o tocca per iniziare, poi usa clic del mouse o gesti touch per tagliare gli oggetti. Ogni gioco ha meccaniche uniche.",
+    faq_save_q: "Posso salvare i miei progressi?",
+    faq_save_a: "La maggior parte dei giochi salva automaticamente i progressi nel browser. Torna quando vuoi e continua da dove hai lasciato.",
+    faq_safe_q: "Questo gioco è sicuro per i bambini?",
+    faq_safe_a: "Sì, tutti i giochi su Slice Master sono adatti alle famiglie e sicuri per giocatori di tutte le età.",
+    why_play: "Perché Giocare su Slice Master?",
+    about_game: "Informazioni sul Gioco",
   },
   tr: {
     site_title: "Slice Master - Ücretsiz Online Kesme Oyunları",
@@ -271,5 +421,30 @@ export const translations: Record<Language, TranslationKeys> = {
     send: "Gönder",
     name_label: "Ad",
     subject_label: "Konu",
+    how_to_play: "Nasıl Oynanır",
+    how_to_play_step1: "Oyun alanına tıklayın veya dokunun",
+    how_to_play_step2: "Nesneleri hassas bir şekilde kesmek için kaydırın veya tıklayın",
+    how_to_play_step3: "Engellerden kaçının ve bonus hedefleri vurun",
+    how_to_play_step4: "Yeni zorluklar açmak için seviyeleri tamamlayın",
+    game_features: "Oyun Özellikleri",
+    feature_free: "100% ücretsiz — gizli maliyet veya abonelik yok",
+    feature_no_download: "İndirme yok — tarayıcınızda anında oynayın",
+    feature_mobile: "Duyarlı dokunmatik kontrollerle mobil uyumlu",
+    feature_fullscreen: "Sürükleyici oyun deneyimi için tam ekran modu",
+    feature_unblocked: "Engelsiz — okulda, işte veya her yerde oynayın",
+    feature_instant: "Kayıt olmadan anında yükleme",
+    tips_and_tricks: "İpuçları ve Püf Noktaları",
+    tip_1: "Kesimlerinizi dikkatli zamanlayın — hassasiyet hızdan önemlidir",
+    tip_2: "Kesimlerinizi planlamak için hareket kalıplarını izleyin",
+    tip_3: "Daha yüksek puanlar için kombo çarpanlarına odaklanın",
+    tip_4: "Kontrolleri ustalaşmak için önceki seviyelerde pratik yapın",
+    faq_how_play_q: "Bu oyunu nasıl oynarım?",
+    faq_how_play_a: "Başlamak için tıklayın veya dokunun, ardından nesneleri kesmek için fare tıklamalarını veya dokunmatik hareketleri kullanın.",
+    faq_save_q: "İlerlememizi kaydedebilir miyim?",
+    faq_save_a: "Çoğu oyun ilerlemenizi tarayıcınızda otomatik olarak kaydeder. İstediğiniz zaman geri gelin ve kaldığınız yerden devam edin.",
+    faq_safe_q: "Bu oyun çocuklar için güvenli mi?",
+    faq_safe_a: "Evet, Slice Master'daki tüm oyunlar aile dostu ve her yaştan oyuncu için güvenlidir.",
+    why_play: "Neden Slice Master'da Oynayasınız?",
+    about_game: "Bu Oyun Hakkında",
   },
 };
