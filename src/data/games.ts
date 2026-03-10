@@ -198,7 +198,7 @@ export const games: Game[] = [
     id: "slice-them-all",
     name: "Slice Them All",
     slug: "slice-them-all",
-    iframeUrl: "https://st.8games.net/10/igra-razrezh-ih-vsekh/",
+    iframeUrl: "/games/slice-them-all.html",
     category: "ninja-action",
     coverUrl: sliceThemAllImg,
     description: "Play Slice Them All free online — an action-packed slicing game where you cut through everything! Use powerful blade strikes to slice through all objects in your path. This satisfying free slicing game features endless levels and increasingly challenging obstacles. Play for free!",
