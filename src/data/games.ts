@@ -261,7 +261,7 @@ export const games: Game[] = [
     id: "slice-the-pizza",
     name: "Slice the Pizza",
     slug: "slice-the-pizza",
-    iframeUrl: "https://st.8games.net/7/igra-razrubi-pitstsu/",
+    iframeUrl: "/games/slice-the-pizza.html",
     category: "fruit-slicing",
     coverUrl: sliceThePizzaImg,
     description: "Play Slice the Pizza free online — cut pizza into perfect slices! Test your precision cutting skills by dividing delicious pizzas into equal portions. This free slicing game is satisfying, fun, and challenges your accuracy. Play in your browser with no download needed!",
