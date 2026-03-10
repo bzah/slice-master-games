@@ -216,7 +216,7 @@ export const games: Game[] = [
     id: "balloon-slicer",
     name: "Balloon Slicer",
     slug: "balloon-slicer",
-    iframeUrl: "https://st.8games.net/9/igra-rezka-vozdushnykh-sharikov/",
+    iframeUrl: "/games/balloon-slicer.html",
     category: "arcade",
     coverUrl: balloonSlicerImg,
     description: "Play Balloon Slicer free online — pop and slice colorful balloons with precision! Cut through waves of floating balloons to earn points and unlock new levels. This addictive free arcade slicing game is fun for all ages. Play unblocked in your browser!",
