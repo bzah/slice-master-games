@@ -108,7 +108,7 @@ export const games: Game[] = [
     id: "fruit-slice-hero",
     name: "Fruit Slice Hero",
     slug: "fruit-slice-hero",
-    iframeUrl: "https://st.8games.net/10/igra-lomtiki-fruktov/",
+    iframeUrl: "/games/fruit-slice-hero.html",
     category: "fruit-slicing",
     coverUrl: fruitSliceHeroImg,
     description: "Play Fruit Slice Hero free online — become the ultimate fruit cutting champion! Slice flying watermelons, oranges, apples, and more with swift blade movements. Avoid bombs, aim for combo multipliers, and set high scores in this classic fruit ninja-style slicing game. Play free and unblocked in any browser!",
