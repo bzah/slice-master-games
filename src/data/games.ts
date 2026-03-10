@@ -288,7 +288,7 @@ export const games: Game[] = [
     id: "mirunas-adventures-slime-galaxy",
     name: "Miruna's Adventures: Slime Galaxy",
     slug: "mirunas-adventures-slime-galaxy",
-    iframeUrl: "https://game.digitap.eu/022eca6a-849c-5cbe-9adc-b4e2b8966feb/index.html",
+    iframeUrl: "/games/mirunas-adventures-slime-galaxy.html",
     category: "character",
     coverUrl: mirunasImg,
     description: "Play Miruna's Adventures: Slime Galaxy free online — join Miruna on a colorful journey through a galaxy of slimes! Slice and battle through slimy creatures in this charming free adventure game. Features cute visuals, engaging gameplay, and a magical story. Play in your browser!",
