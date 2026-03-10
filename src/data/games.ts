@@ -153,7 +153,7 @@ export const games: Game[] = [
     id: "tmnt-the-final-slice",
     name: "TMNT: The Final Slice",
     slug: "tmnt-the-final-slice",
-    iframeUrl: "https://st.8games.net/dasha1/181/teenage_mutant_ninja_turtles_the_final_slice/",
+    iframeUrl: "/games/tmnt-the-final-slice.html",
     category: "character",
     coverUrl: tmntImg,
     description: "Play TMNT: The Final Slice free online — join the Teenage Mutant Ninja Turtles in this pizza-slicing adventure! Help Leonardo, Raphael, Donatello, and Michelangelo slice through pizza and defeat enemies. This free character game brings the beloved turtles to your browser!",
