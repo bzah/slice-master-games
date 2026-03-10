@@ -81,7 +81,7 @@ export const games: Game[] = [
     id: "perfect-slices",
     name: "Perfect Slices",
     slug: "perfect-slices",
-    iframeUrl: "https://www.gameflare.com/embed/perfect-slices/",
+    iframeUrl: "/games/perfect-slices.html",
     category: "fruit-slicing",
     coverUrl: perfectSlicesImg,
     description: "Play Perfect Slices free online — the most satisfying food cutting game! Tap to slice ingredients on the chopping board with perfect timing. Cut vegetables, fruits, and more as they slide past your blade. Avoid hitting the wooden blocks and achieve perfect slices every time! This free slicing game is great for relaxing and sharpening your reflexes.",
