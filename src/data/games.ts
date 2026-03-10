@@ -342,7 +342,7 @@ export const games: Game[] = [
     id: "slycer",
     name: "Slycer",
     slug: "slycer",
-    iframeUrl: "https://st.8games.net/11/igra-razrezh-arbuz/",
+    iframeUrl: "/games/slycer.html",
     category: "arcade",
     coverUrl: slycerImg,
     description: "Play Slycer free online — a fast-paced watermelon slicing arcade game! Cut through juicy melons with speed and accuracy in this satisfying free slicing game. Features smooth gameplay and addictive mechanics that keep you coming back for more. Play Slycer unblocked in any browser!",
