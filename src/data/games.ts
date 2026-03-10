@@ -243,7 +243,7 @@ export const games: Game[] = [
     id: "slice-the-digital-circus",
     name: "Slice the Digital Circus",
     slug: "slice-the-digital-circus",
-    iframeUrl: "https://st.8games.net/7/igra-razrubi-tsifrovoj-tsirk/",
+    iframeUrl: "/games/slice-the-digital-circus.html",
     category: "character",
     coverUrl: digitalCircusImg,
     description: "Play Slice the Digital Circus free online — cut and slash through the Amazing Digital Circus world! Slice circus-themed characters and objects in this fun free character game. Enjoy vibrant visuals and addictive gameplay inspired by the popular series. Play free and unblocked!",
