@@ -16,32 +16,17 @@ export function GameCard({ game }: GameCardProps) {
     >
       {/* Image area */}
       <div className="aspect-[4/3] relative overflow-hidden">
-        {/* Default state: cover image */}
-        <div className="game-card-image absolute inset-0">
-          <img
-            src={game.coverUrl}
-            alt={game.name}
-            className="w-full h-full object-cover"
-            loading="lazy"
-          />
-          {/* Play overlay - always visible on mobile, hover on desktop */}
-          <div className="absolute inset-0 flex items-end p-2 sm:p-3">
-            <span className="bg-primary text-primary-foreground px-2 sm:px-3 py-1 text-[10px] sm:text-xs font-heading font-bold uppercase tracking-wider opacity-100 sm:opacity-0 sm:group-hover:opacity-100 transition-opacity duration-150">
-              {t("play_now")}
-            </span>
-          </div>
-        </div>
-
-        {/* Hover state: description - only on desktop */}
-        <div className="game-card-desc absolute inset-0 hidden sm:flex items-center bg-card p-4">
-          <p className="text-xs text-foreground leading-relaxed line-clamp-5">
-            {game.description}
-          </p>
-        </div>
-
-        {/* Diagonal slice line - desktop only */}
-        <div className="absolute inset-0 overflow-hidden pointer-events-none hidden sm:block">
-          <div className="slice-line" />
+        <img
+          src={game.coverUrl}
+          alt={game.name}
+          className="w-full h-full object-cover"
+          loading="lazy"
+        />
+        {/* Play Now overlay */}
+        <div className="absolute inset-0 bg-foreground/0 group-hover:bg-foreground/50 transition-colors duration-200 flex items-center justify-center">
+          <span className="bg-primary text-primary-foreground px-4 py-2 text-xs sm:text-sm font-heading font-bold uppercase tracking-wider opacity-0 group-hover:opacity-100 scale-90 group-hover:scale-100 transition-all duration-200">
+            {t("play_now")}
+          </span>
         </div>
       </div>
 
