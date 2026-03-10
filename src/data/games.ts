@@ -234,7 +234,7 @@ export const games: Game[] = [
     id: "sword-master-slice-your-enemies",
     name: "Sword Master: Slice Your Enemies!",
     slug: "sword-master-slice-your-enemies",
-    iframeUrl: "https://st.8games.net/10/8g/igra-master-mecha-razrubi-vragov/",
+    iframeUrl: "/games/sword-master-slice-your-enemies.html",
     category: "ninja-action",
     coverUrl: swordMasterImg,
     description: "Play Sword Master: Slice Your Enemies free online — become the ultimate blade warrior! Wield devastating swords to slice through waves of enemies in this epic free action game. Master different blade techniques and upgrade your weapons. Play this unblocked slicing game in any browser!",
