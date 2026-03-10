@@ -306,7 +306,7 @@ export const games: Game[] = [
     id: "draw-weapons-rush",
     name: "Draw Weapons Rush",
     slug: "draw-weapons-rush",
-    iframeUrl: "https://st.8games.net/10/igra-narisuj-oruzhie/",
+    iframeUrl: "/games/draw-weapons-rush.html",
     category: "ninja-action",
     coverUrl: drawWeaponsImg,
     description: "Play Draw Weapons Rush free online — draw your own blades and weapons! Sketch swords, axes, and slicing tools, then watch them come to life in battle. This creative free game combines drawing mechanics with action gameplay. Unleash your imagination and draw the ultimate weapon!",
