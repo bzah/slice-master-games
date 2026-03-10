@@ -54,34 +54,6 @@
   .blade-border {
     border: 1px solid hsl(var(--blade-border));
   }
-  .game-card-image {
-    opacity: 1;
-    transition: opacity 0s 150ms;
-  }
-  .group:hover .game-card-image {
-    opacity: 0;
-  }
-  .game-card-desc {
-    opacity: 0;
-    transition: opacity 0s 150ms;
-  }
-  .group:hover .game-card-desc {
-    opacity: 1;
-  }
-  .slice-line {
-    position: absolute;
-    width: 200%;
-    height: 1px;
-    background: hsl(var(--primary));
-    top: 50%;
-    left: 50%;
-    transform: translate(-200%, -50%) rotate(45deg);
-    transition: transform 150ms linear;
-    pointer-events: none;
-  }
-  .group:hover .slice-line {
-    transform: translate(-50%, -50%) rotate(45deg);
-  }
   .wipe-in {
     clip-path: inset(0 100% 0 0);
     animation: wipeIn 200ms linear forwards;
@@ -101,15 +73,3 @@
   }
 }
 
-/* Disable hover effects on touch devices for game cards */
-@media (hover: none) {
-  .group:hover .game-card-image {
-    opacity: 1;
-  }
-  .group:hover .game-card-desc {
-    opacity: 0;
-  }
-  .group:hover .slice-line {
-    transform: translate(-200%, -50%) rotate(45deg);
-  }
-}
