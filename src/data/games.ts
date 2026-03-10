@@ -207,7 +207,7 @@ export const games: Game[] = [
     id: "mr-slice",
     name: "Mr. Slice",
     slug: "mr-slice",
-    iframeUrl: "https://st.8games.net/10/igra-mister-slajs/",
+    iframeUrl: "/games/mr-slice.html",
     category: "puzzle",
     coverUrl: mrSliceImg,
     description: "Play Mr. Slice free online — a clever puzzle slicing game where strategic cuts are key! Plan your slices carefully to complete each brain-teasing level. This free puzzle game combines cutting mechanics with logical thinking. Can you outsmart every level and become the true Mr. Slice?",
