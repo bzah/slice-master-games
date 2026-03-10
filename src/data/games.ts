@@ -189,7 +189,7 @@ export const games: Game[] = [
     id: "veggie-slicer",
     name: "Veggie Slicer",
     slug: "veggie-slicer",
-    iframeUrl: "https://st.8games.net/igry-fruktovyj-nindzya/igra-rezh-ovoshchi/",
+    iframeUrl: "/games/veggie-slicer.html",
     category: "fruit-slicing",
     coverUrl: veggieSlicerImg,
     description: "Play Veggie Slicer free online — slice vegetables with speed and precision! Cut carrots, peppers, broccoli, and more as they fly through the air. This classic free vegetable cutting game tests your reflexes and accuracy. Play unblocked in any browser on desktop or mobile!",
