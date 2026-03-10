@@ -99,7 +99,7 @@ export const games: Game[] = [
     id: "hook-and-slice",
     name: "Hook & Slice",
     slug: "hook-and-slice",
-    iframeUrl: "https://st1.8games.net/10/8g/igra-samuray-na-kryuke/",
+    iframeUrl: "/games/hook-and-slice.html",
     category: "ninja-action",
     coverUrl: hookAndSliceImg,
     description: "Play Hook & Slice free online — an action-packed samurai slicing game! Swing on grappling hooks and slice through enemies with your katana. Combine acrobatic moves with devastating blade strikes in this unique free ninja game. Master the hook-and-slash mechanics to become an unstoppable warrior!",
