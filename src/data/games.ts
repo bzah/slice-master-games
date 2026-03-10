@@ -225,7 +225,7 @@ export const games: Game[] = [
     id: "sword-play-ninja-slice-runner",
     name: "Sword Play: Ninja Slice Runner",
     slug: "sword-play-ninja-slice-runner",
-    iframeUrl: "https://st.8games.net/10/igra-sword-play-master-klinka-3d/",
+    iframeUrl: "/games/sword-play-ninja-slice-runner.html",
     category: "ninja-action",
     coverUrl: swordPlayImg,
     description: "Play Sword Play: Ninja Slice Runner free online — combine running with epic sword slicing! Sprint through obstacles and cut through everything with your ninja blade in 3D. This free action runner game features satisfying sword combat and fast-paced gameplay. Play free on desktop or mobile!",
