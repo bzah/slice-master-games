@@ -171,7 +171,7 @@ export const games: Game[] = [
     id: "slice-chef-food-survivor",
     name: "Slice Chef: Food Survivor",
     slug: "slice-chef-food-survivor",
-    iframeUrl: "https://st.8games.net/10/igra-povar-protiv-ovoshchej/",
+    iframeUrl: "/games/slice-chef-food-survivor.html",
     category: "fruit-slicing",
     coverUrl: sliceChefImg,
     description: "Play Slice Chef: Food Survivor free online — battle waves of flying vegetables as a master chef! Slash through incoming produce with your kitchen knife to survive. This unique free slicing game combines cooking action with survival gameplay. How long can you last against the food invasion?",
