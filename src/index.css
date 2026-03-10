@@ -42,6 +42,8 @@
   }
   body {
     @apply bg-background text-foreground font-body antialiased;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-text-size-adjust: 100%;
   }
   h1, h2, h3, h4, h5, h6 {
     @apply font-heading;
@@ -86,5 +88,28 @@
   }
   @keyframes wipeIn {
     to { clip-path: inset(0 0 0 0); }
+  }
+  .touch-manipulation {
+    touch-action: manipulation;
+  }
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+/* Disable hover effects on touch devices for game cards */
+@media (hover: none) {
+  .group:hover .game-card-image {
+    opacity: 1;
+  }
+  .group:hover .game-card-desc {
+    opacity: 0;
+  }
+  .group:hover .slice-line {
+    transform: translate(-200%, -50%) rotate(45deg);
   }
 }

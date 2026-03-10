@@ -15,8 +15,8 @@ const GamePage = () => {
 
   if (!game) {
     return (
-      <div className="container px-4 py-16 text-center">
-        <h1 className="font-heading font-bold text-2xl text-foreground">Game not found</h1>
+      <div className="container px-3 sm:px-4 py-16 text-center">
+        <h1 className="font-heading font-bold text-xl sm:text-2xl text-foreground">Game not found</h1>
         <Link to={localizedPath("/")} className="mt-4 inline-block text-primary text-sm font-heading font-medium">
           {t("back_to_games")}
         </Link>
@@ -77,11 +77,11 @@ const GamePage = () => {
   return (
     <div>
       {/* Game iframe */}
-      <GameIframe src={game.iframeUrl} title={game.name} className="w-full h-[55vh] md:h-[65vh]" />
+      <GameIframe src={game.iframeUrl} title={game.name} className="w-full h-[45vh] sm:h-[55vh] md:h-[65vh]" />
 
-      <div className="container px-4 mt-6">
+      <div className="container px-3 sm:px-4 mt-4 sm:mt-6">
         {/* Breadcrumb */}
-        <nav className="flex items-center gap-1 text-xs text-muted-foreground mb-4">
+        <nav className="flex items-center gap-1 text-[10px] sm:text-xs text-muted-foreground mb-3 sm:mb-4 flex-wrap">
           <Link to={localizedPath("/")} className="hover:text-primary">{t("home")}</Link>
           <span>/</span>
           {category && (
@@ -94,25 +94,25 @@ const GamePage = () => {
         </nav>
 
         {/* Game info */}
-        <section className="mb-8">
-          <h1 className="font-heading font-bold text-2xl md:text-3xl mb-2 text-foreground">
+        <section className="mb-6 sm:mb-8">
+          <h1 className="font-heading font-bold text-xl sm:text-2xl md:text-3xl mb-2 text-foreground">
             {t("play_game")} {game.name}
           </h1>
-          <p className="text-sm text-muted-foreground leading-relaxed max-w-3xl">{game.description}</p>
+          <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed max-w-3xl">{game.description}</p>
         </section>
 
         {/* FAQ */}
-        <section className="mb-10 max-w-3xl">
-          <h2 className="font-heading font-bold text-lg mb-4 text-foreground">{t("faq")}</h2>
+        <section className="mb-6 sm:mb-10 max-w-3xl">
+          <h2 className="font-heading font-bold text-base sm:text-lg mb-3 sm:mb-4 text-foreground">{t("faq")}</h2>
           <div className="flex flex-col">
             {[
               { q: `Is ${game.name} free to play?`, a: t("faq_free_a") },
               { q: `Can I play ${game.name} on mobile?`, a: t("faq_mobile_a") },
               { q: `Is ${game.name} unblocked?`, a: t("faq_unblocked_a") },
             ].map((item, i) => (
-              <div key={i} className="border blade-border p-4 -mt-px">
-                <h3 className="font-heading font-bold text-sm text-foreground">{item.q}</h3>
-                <p className="mt-1 text-sm text-muted-foreground">{item.a}</p>
+              <div key={i} className="border blade-border p-3 sm:p-4 -mt-px">
+                <h3 className="font-heading font-bold text-xs sm:text-sm text-foreground">{item.q}</h3>
+                <p className="mt-1 text-xs sm:text-sm text-muted-foreground">{item.a}</p>
               </div>
             ))}
           </div>
