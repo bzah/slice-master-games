@@ -279,7 +279,7 @@ export const games: Game[] = [
     id: "halloween-endless-slicer",
     name: "Halloween Endless Slicer",
     slug: "halloween-endless-slicer",
-    iframeUrl: "https://st.8games.net/10/igra-nindzya-hellouin/",
+    iframeUrl: "/games/halloween-endless-slicer.html",
     category: "ninja-action",
     coverUrl: halloweenEndlessImg,
     description: "Play Halloween Endless Slicer free online — a spooky ninja cutting game with endless waves! Slash through pumpkins, ghosts, and Halloween objects as a ninja warrior. This free seasonal slicing game features endless gameplay and festive Halloween graphics. How long can you survive?",
