@@ -86,35 +86,35 @@ const Index = () => {
         <GameIframe
           src={featuredGame.iframeUrl}
           title={featuredGame.name}
-          className="w-full h-[55vh] md:h-[60vh]"
+          className="w-full h-[45vh] sm:h-[55vh] md:h-[60vh]"
         />
       </div>
 
       <FloatingSearch triggerRef={iframeRef as React.RefObject<HTMLElement>} />
 
-      <div className="container px-4 mt-8">
+      <div className="container px-3 sm:px-4 mt-5 sm:mt-8">
         {/* Featured game info */}
-        <section className="mb-10 max-w-4xl">
-          <h1 className="font-heading font-bold text-2xl md:text-4xl mb-3 text-foreground leading-tight">
+        <section className="mb-6 sm:mb-10 max-w-4xl">
+          <h1 className="font-heading font-bold text-xl sm:text-2xl md:text-4xl mb-2 sm:mb-3 text-foreground leading-tight">
             {featuredGame.name} — {t("free_online_games")}
           </h1>
-          <p className="text-sm text-muted-foreground leading-relaxed">
+          <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed">
             {featuredGame.description}
           </p>
         </section>
 
         {/* Categories */}
-        <section className="mb-10">
-          <div className="flex items-center gap-3 mb-4">
-            <div className="w-1 h-6 bg-primary" />
-            <h2 className="font-heading font-bold text-lg text-foreground">{t("categories")}</h2>
+        <section className="mb-6 sm:mb-10">
+          <div className="flex items-center gap-2 sm:gap-3 mb-3 sm:mb-4">
+            <div className="w-1 h-5 sm:h-6 bg-primary" />
+            <h2 className="font-heading font-bold text-base sm:text-lg text-foreground">{t("categories")}</h2>
           </div>
-          <div className="flex flex-wrap">
+          <div className="flex flex-wrap gap-0 overflow-x-auto -mx-3 px-3 sm:mx-0 sm:px-0 scrollbar-hide">
             {categories.map((cat) => (
               <Link
                 key={cat.id}
                 to={localizedPath(`/category/${cat.slug}`)}
-                className="border blade-border px-5 py-2.5 text-sm font-heading font-semibold text-foreground hover:bg-primary hover:text-primary-foreground transition-colors duration-150 -ml-px first:ml-0"
+                className="border blade-border px-3 sm:px-5 py-2 sm:py-2.5 text-xs sm:text-sm font-heading font-semibold text-foreground hover:bg-primary hover:text-primary-foreground active:bg-primary active:text-primary-foreground transition-colors duration-150 -ml-px first:ml-0 whitespace-nowrap touch-manipulation flex-shrink-0"
               >
                 {cat.name}
               </Link>
@@ -126,10 +126,10 @@ const Index = () => {
         <GameGrid games={games} title={t("all_games")} />
 
         {/* FAQ */}
-        <section className="mt-14 mb-8 max-w-3xl">
-          <div className="flex items-center gap-3 mb-5">
-            <div className="w-1 h-6 bg-primary" />
-            <h2 className="font-heading font-bold text-lg text-foreground">{t("faq")}</h2>
+        <section className="mt-8 sm:mt-14 mb-6 sm:mb-8 max-w-3xl">
+          <div className="flex items-center gap-2 sm:gap-3 mb-3 sm:mb-5">
+            <div className="w-1 h-5 sm:h-6 bg-primary" />
+            <h2 className="font-heading font-bold text-base sm:text-lg text-foreground">{t("faq")}</h2>
           </div>
           <div className="flex flex-col">
             {[
@@ -137,20 +137,20 @@ const Index = () => {
               { q: t("faq_mobile_q"), a: t("faq_mobile_a") },
               { q: t("faq_unblocked_q"), a: t("faq_unblocked_a") },
             ].map((item, i) => (
-              <div key={i} className="border blade-border p-5 -mt-px">
-                <h3 className="font-heading font-bold text-sm text-foreground">{item.q}</h3>
-                <p className="mt-2 text-sm text-muted-foreground leading-relaxed">{item.a}</p>
+              <div key={i} className="border blade-border p-3 sm:p-5 -mt-px">
+                <h3 className="font-heading font-bold text-xs sm:text-sm text-foreground">{item.q}</h3>
+                <p className="mt-1 sm:mt-2 text-xs sm:text-sm text-muted-foreground leading-relaxed">{item.a}</p>
               </div>
             ))}
           </div>
         </section>
 
         {/* SEO content block */}
-        <section className="mt-10 mb-8 max-w-4xl">
-          <h2 className="font-heading font-bold text-lg mb-3 text-foreground">
+        <section className="mt-6 sm:mt-10 mb-6 sm:mb-8 max-w-4xl">
+          <h2 className="font-heading font-bold text-base sm:text-lg mb-2 sm:mb-3 text-foreground">
             Play Slice Master Online Free — The Best Slicing Games
           </h2>
-          <div className="text-sm text-muted-foreground leading-relaxed space-y-3">
+          <div className="text-xs sm:text-sm text-muted-foreground leading-relaxed space-y-2 sm:space-y-3">
             <p>
               Welcome to <strong>Slice Master</strong> — your ultimate destination for free online slicing games! Whether you're looking for <em>Slice Master Cool Math Games</em>, fruit cutting challenges, ninja sword action, or relaxing puzzle slicers, we have the perfect game for you.
             </p>

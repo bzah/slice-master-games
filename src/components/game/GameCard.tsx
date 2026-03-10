@@ -12,7 +12,7 @@ export function GameCard({ game }: GameCardProps) {
   return (
     <Link
       to={localizedPath(`/game/${game.slug}`)}
-      className="group relative block border blade-border bg-card overflow-hidden"
+      className="group relative block border blade-border bg-card overflow-hidden touch-manipulation"
     >
       {/* Image area */}
       <div className="aspect-[4/3] relative overflow-hidden">
@@ -24,34 +24,34 @@ export function GameCard({ game }: GameCardProps) {
             className="w-full h-full object-cover"
             loading="lazy"
           />
-          {/* Play overlay */}
-          <div className="absolute inset-0 flex items-end p-3">
-            <span className="bg-primary text-primary-foreground px-3 py-1 text-xs font-heading font-bold uppercase tracking-wider opacity-0 group-hover:opacity-100 transition-opacity duration-150">
+          {/* Play overlay - always visible on mobile, hover on desktop */}
+          <div className="absolute inset-0 flex items-end p-2 sm:p-3">
+            <span className="bg-primary text-primary-foreground px-2 sm:px-3 py-1 text-[10px] sm:text-xs font-heading font-bold uppercase tracking-wider opacity-100 sm:opacity-0 sm:group-hover:opacity-100 transition-opacity duration-150">
               {t("play_now")}
             </span>
           </div>
         </div>
 
-        {/* Hover state: description */}
-        <div className="game-card-desc absolute inset-0 flex items-center bg-card p-4">
+        {/* Hover state: description - only on desktop */}
+        <div className="game-card-desc absolute inset-0 hidden sm:flex items-center bg-card p-4">
           <p className="text-xs text-foreground leading-relaxed line-clamp-5">
             {game.description}
           </p>
         </div>
 
-        {/* Diagonal slice line */}
-        <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        {/* Diagonal slice line - desktop only */}
+        <div className="absolute inset-0 overflow-hidden pointer-events-none hidden sm:block">
           <div className="slice-line" />
         </div>
       </div>
 
       {/* Title bar */}
-      <div className="px-3 py-2.5 border-t blade-border bg-card">
-        <h3 className="font-heading text-xs font-bold truncate text-foreground">
+      <div className="px-2 sm:px-3 py-2 sm:py-2.5 border-t blade-border bg-card">
+        <h3 className="font-heading text-[11px] sm:text-xs font-bold truncate text-foreground">
           {game.name}
         </h3>
-        <p className="text-[10px] text-muted-foreground mt-0.5 truncate">
-          {game.description.substring(0, 60)}...
+        <p className="text-[9px] sm:text-[10px] text-muted-foreground mt-0.5 truncate">
+          {game.description.substring(0, 50)}...
         </p>
       </div>
     </Link>
