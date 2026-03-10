@@ -126,7 +126,7 @@ export const games: Game[] = [
     id: "watermelon-run-3d",
     name: "Watermelon Run 3D",
     slug: "watermelon-run-3d",
-    iframeUrl: "https://st.8games.net/11/igra-arbuznyj-beg",
+    iframeUrl: "/games/watermelon-run-3d.html",
     category: "arcade",
     coverUrl: watermelonRunImg,
     description: "Play Watermelon Run 3D free online — a hilarious runner game where you roll and slice as a watermelon! Dodge obstacles, collect power-ups, and cut through barriers in colorful 3D levels. This fun free arcade game is perfect for quick gaming sessions on mobile or desktop.",
