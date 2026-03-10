@@ -62,7 +62,7 @@ export const games: Game[] = [
     id: "slice-master",
     name: "Slice Master",
     slug: "slice-master",
-    iframeUrl: "https://www.coolmathgames.com/0-slice-master/play",
+    iframeUrl: "/games/slice-master.html",
     category: "arcade",
     coverUrl: sliceMasterImg,
     description: "Play Slice Master online for free — the #1 slicing game on Cool Math Games! Swing your razor-sharp blade and slice through objects with perfect precision. Master each level by cutting everything in your path to earn maximum points. Slice Master is the ultimate browser-based slicing game, playable on desktop and mobile with no download needed. Challenge yourself with increasingly difficult levels and become the true Slice Master!",
