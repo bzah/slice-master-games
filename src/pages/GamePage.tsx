@@ -1,7 +1,7 @@
 import { useParams, Link } from "react-router-dom";
 import { useLanguage } from "@/i18n/LanguageContext";
 import { useSEO } from "@/hooks/useSEO";
-import { games, categories, getRelatedGames } from "@/data/games";
+import { games, categories, getRelatedGames, getGamesByCategory } from "@/data/games";
 import { GameIframe } from "@/components/game/GameIframe";
 import { GameGrid } from "@/components/game/GameGrid";
 
@@ -26,6 +26,7 @@ const GamePage = () => {
 
   const category = categories.find((c) => c.id === game.category);
   const related = getRelatedGames(game);
+  const sameCategoryGames = category ? getGamesByCategory(category.id).filter(g => g.id !== game.id).slice(0, 4) : [];
 
   useSEO({
     title: `${game.name} - Play Free Online | Slice Master`,
@@ -50,7 +51,8 @@ const GamePage = () => {
         genre: category?.name || "Slicing",
         playMode: "SinglePlayer",
         isAccessibleForFree: true,
-        gamePlatform: "Web Browser",
+        gamePlatform: ["Web Browser", "Mobile", "Desktop"],
+        numberOfPlayers: { "@type": "QuantitativeValue", value: 1 },
         offers: { "@type": "Offer", price: "0", priceCurrency: "USD" },
       },
       {
@@ -90,6 +92,9 @@ const GamePage = () => {
     ],
   });
 
+  // Split longDescription into paragraphs
+  const longDescParagraphs = game.longDescription.split("\n\n").filter(Boolean);
+
   return (
     <div>
       {/* Game iframe */}
@@ -109,7 +114,7 @@ const GamePage = () => {
           <span className="text-foreground">{game.name}</span>
         </nav>
 
-        {/* Game info */}
+        {/* Game title + short description */}
         <section className="mb-6 sm:mb-8">
           <h1 className="font-heading font-bold text-xl sm:text-2xl md:text-3xl mb-2 text-foreground">
             {t("play_game")} {game.name} — {t("free_online_games")}
@@ -117,16 +122,78 @@ const GamePage = () => {
           <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed max-w-3xl">{game.description}</p>
         </section>
 
-        {/* Two-column layout: How to Play + Features */}
+        {/* Game Details Table + Tags */}
+        <section className="mb-6 sm:mb-8 max-w-4xl">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            {/* Details table */}
+            <div className="border blade-border">
+              <div className="px-3 sm:px-4 py-2 bg-secondary/50 border-b blade-border">
+                <h2 className="font-heading font-bold text-xs sm:text-sm text-foreground">Game Details</h2>
+              </div>
+              <table className="w-full text-xs sm:text-sm">
+                <tbody>
+                  {[
+                    ["Game", game.name],
+                    ["Category", category?.name || "Slicing"],
+                    ["Platform", "Web Browser (Desktop, Mobile, Tablet)"],
+                    ["Price", "Free to Play"],
+                    ["Players", "Single Player"],
+                    ["Rating", "⭐ 4.6/5"],
+                    ["Status", "Unblocked"],
+                  ].map(([label, value], i) => (
+                    <tr key={i} className="border-b blade-border last:border-b-0">
+                      <td className="px-3 sm:px-4 py-2 font-heading font-semibold text-foreground w-1/3">{label}</td>
+                      <td className="px-3 sm:px-4 py-2 text-muted-foreground">{value}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+
+            {/* Tags + Quick Links */}
+            <div className="flex flex-col gap-4">
+              <div className="border blade-border p-3 sm:p-4">
+                <h2 className="font-heading font-bold text-xs sm:text-sm mb-2 text-foreground">Tags</h2>
+                <div className="flex flex-wrap gap-1.5">
+                  {game.tags.map((tag, i) => (
+                    <span key={i} className="bg-secondary text-secondary-foreground px-2 py-1 text-[10px] sm:text-xs font-heading">
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+              </div>
+              {category && (
+                <div className="border blade-border p-3 sm:p-4">
+                  <h2 className="font-heading font-bold text-xs sm:text-sm mb-2 text-foreground">
+                    More {category.name} Games
+                  </h2>
+                  <ul className="space-y-1">
+                    {sameCategoryGames.map(g => (
+                      <li key={g.id}>
+                        <Link
+                          to={localizedPath(`/game/${g.slug}`)}
+                          className="text-xs sm:text-sm text-primary hover:underline"
+                        >
+                          ▸ {g.name}
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              )}
+            </div>
+          </div>
+        </section>
+
+        {/* Two-column: How to Play + Tips */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 mb-6 sm:mb-10 max-w-4xl">
-          {/* How to Play */}
           <section className="border blade-border p-4 sm:p-5">
             <h2 className="font-heading font-bold text-base sm:text-lg mb-3 text-foreground flex items-center gap-2">
               <svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="currentColor" strokeWidth="1.5" className="text-primary flex-shrink-0">
                 <circle cx="9" cy="9" r="7" />
                 <polygon points="7,6 13,9 7,12" fill="currentColor" stroke="none" />
               </svg>
-              {t("how_to_play")}
+              {t("how_to_play")} {game.name}
             </h2>
             <ol className="space-y-2">
               {[t("how_to_play_step1"), t("how_to_play_step2"), t("how_to_play_step3"), t("how_to_play_step4")].map((step, i) => (
@@ -138,7 +205,6 @@ const GamePage = () => {
             </ol>
           </section>
 
-          {/* Tips & Tricks */}
           <section className="border blade-border p-4 sm:p-5">
             <h2 className="font-heading font-bold text-base sm:text-lg mb-3 text-foreground flex items-center gap-2">
               <svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="currentColor" strokeWidth="1.5" className="text-primary flex-shrink-0">
@@ -157,7 +223,7 @@ const GamePage = () => {
           </section>
         </div>
 
-        {/* Game Features */}
+        {/* Game Features Grid */}
         <section className="mb-6 sm:mb-10 max-w-4xl">
           <h2 className="font-heading font-bold text-base sm:text-lg mb-3 sm:mb-4 text-foreground flex items-center gap-2">
             <div className="w-1 h-5 sm:h-6 bg-primary" />
@@ -180,63 +246,73 @@ const GamePage = () => {
           </div>
         </section>
 
-        {/* About This Game - SEO rich content */}
+        {/* Extended Description — Long SEO content */}
         <section className="mb-6 sm:mb-10 max-w-3xl">
           <h2 className="font-heading font-bold text-base sm:text-lg mb-3 text-foreground flex items-center gap-2">
             <div className="w-1 h-5 sm:h-6 bg-primary" />
-            {t("about_game")}
+            {t("about_game")}: {game.name}
           </h2>
           <div className="text-xs sm:text-sm text-muted-foreground leading-relaxed space-y-3">
-            <p>
-              <strong>{game.name}</strong> is one of the most popular free online slicing games available on Slice Master. 
-              {category && <> Part of our <Link to={localizedPath(`/category/${category.slug}`)} className="text-primary hover:underline">{category.name}</Link> collection, </>}
-              this game delivers an engaging experience that combines precision cutting mechanics with satisfying gameplay. 
-              Whether you're a fan of <em>Slice Master Cool Math Games</em> or looking for new slicing challenges, {game.name} offers hours of free entertainment.
-            </p>
-            <p>
-              Play {game.name} online for free right here on slice-master.us — no downloads, no sign-ups, no ads blocking your gameplay. 
-              Our games are <strong>unblocked</strong> and work perfectly on all devices including desktop computers, laptops, tablets, and mobile phones. 
-              The game features responsive controls that adapt to your device, whether you're using a mouse, keyboard, or touchscreen.
-            </p>
-            <p>
-              Looking for more games like {game.name}? Check out our collection of {related.length}+ related slicing games below, 
-              or browse our <Link to={localizedPath("/")} className="text-primary hover:underline">complete game catalog</Link> featuring over 30 free online slicing games. 
-              Every game on Slice Master is carefully selected to deliver the best cutting and slicing experience on the web.
-            </p>
+            {longDescParagraphs.map((para, i) => (
+              <p key={i}>{para}</p>
+            ))}
           </div>
         </section>
 
-        {/* Why Play on Slice Master */}
+        {/* Why Play Section with internal links */}
         <section className="mb-6 sm:mb-10 max-w-3xl">
           <h2 className="font-heading font-bold text-base sm:text-lg mb-3 text-foreground flex items-center gap-2">
             <div className="w-1 h-5 sm:h-6 bg-primary" />
             {t("why_play")}
           </h2>
-          <div className="text-xs sm:text-sm text-muted-foreground leading-relaxed space-y-2">
+          <div className="text-xs sm:text-sm text-muted-foreground leading-relaxed space-y-3">
             <p>
-              Slice Master is your go-to destination for the best free online slicing games. We offer a curated collection of over 30 games 
-              across multiple categories including <strong>Fruit Slicing</strong>, <strong>Ninja & Sword</strong>, <strong>Puzzle & Strategy</strong>, 
-              and <strong>Arcade</strong> games. All games are free, unblocked, and instantly playable in your browser.
+              <strong>Slice Master</strong> is your ultimate destination for the best free online slicing games. 
+              We offer a carefully curated collection of over {games.length} games across {categories.length} categories: {" "}
+              {categories.map((cat, i) => (
+                <span key={cat.id}>
+                  <Link to={localizedPath(`/category/${cat.slug}`)} className="text-primary hover:underline font-medium">
+                    {cat.name}
+                  </Link>
+                  {i < categories.length - 1 ? ", " : ""}
+                </span>
+              ))}
+              . Every game is free, unblocked, and plays instantly in your browser.
             </p>
             <p>
-              Unlike other gaming sites, Slice Master focuses exclusively on slicing and cutting games, ensuring the highest quality selection. 
-              Our games load instantly, work on any device, and require no downloads or registrations. 
-              Whether you're at school, work, or home, you can enjoy {game.name} and all our other titles anytime, anywhere.
+              If you enjoy {game.name}, you'll love these similar games: {" "}
+              {related.slice(0, 5).map((g, i) => (
+                <span key={g.id}>
+                  <Link to={localizedPath(`/game/${g.slug}`)} className="text-primary hover:underline">
+                    {g.name}
+                  </Link>
+                  {i < 4 ? ", " : ""}
+                </span>
+              ))}
+              . All our games work on desktop computers, laptops, Chromebooks, iPads, Android tablets, 
+              and smartphones — with optimized touch controls for mobile play and fullscreen mode for immersive gaming.
+            </p>
+            <p>
+              Unlike other gaming sites, <strong>slice-master.us</strong> focuses exclusively on slicing and cutting games, 
+              ensuring the highest quality selection. No distracting ads blocking your gameplay, no forced registrations, 
+              and no app downloads — just pure, instant gaming fun. Whether you're at school during a break, 
+              at work during lunch, or at home relaxing, you can enjoy {game.name} and all our titles anytime, anywhere. 
+              Start playing now and discover why millions of players love slicing games!
             </p>
           </div>
         </section>
 
-        {/* FAQ — expanded to 6 questions */}
+        {/* FAQ — 6 questions */}
         <section className="mb-6 sm:mb-10 max-w-3xl">
           <h2 className="font-heading font-bold text-base sm:text-lg mb-3 sm:mb-4 text-foreground flex items-center gap-2">
             <div className="w-1 h-5 sm:h-6 bg-primary" />
-            {t("faq")}
+            {t("faq")} — {game.name}
           </h2>
           <div className="flex flex-col">
             {[
               { q: `Is ${game.name} free to play?`, a: t("faq_free_a") },
               { q: `Can I play ${game.name} on mobile?`, a: t("faq_mobile_a") },
-              { q: `Is ${game.name} unblocked?`, a: t("faq_unblocked_a") },
+              { q: `Is ${game.name} unblocked at school?`, a: t("faq_unblocked_a") },
               { q: `How do I play ${game.name}?`, a: t("faq_how_play_a") },
               { q: `Can I save my progress in ${game.name}?`, a: t("faq_save_a") },
               { q: `Is ${game.name} safe for kids?`, a: t("faq_safe_a") },
@@ -251,6 +327,16 @@ const GamePage = () => {
 
         {/* Related games */}
         <GameGrid games={related} title={t("related_games")} />
+
+        {/* Browse all link */}
+        <div className="mt-6 sm:mt-8 mb-4 text-center">
+          <Link
+            to={localizedPath("/")}
+            className="inline-block border blade-border px-6 py-3 font-heading font-bold text-sm text-foreground hover:bg-primary hover:text-primary-foreground transition-colors duration-150"
+          >
+            ← Browse All {games.length} Games
+          </Link>
+        </div>
       </div>
     </div>
   );
