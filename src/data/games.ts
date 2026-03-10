@@ -270,7 +270,7 @@ export const games: Game[] = [
     id: "laser-slicer",
     name: "Laser Slicer",
     slug: "laser-slicer",
-    iframeUrl: "https://st.8games.net/7/igra-lazernyj-slajser/",
+    iframeUrl: "/games/laser-slicer.html",
     category: "puzzle",
     coverUrl: laserSlicerImg,
     description: "Play Laser Slicer free online — use futuristic laser beams to slice through objects! Aim your laser with precision to cut through puzzle elements in this sci-fi themed free slicing game. Features neon visuals and challenging levels that test your accuracy and strategic thinking.",
