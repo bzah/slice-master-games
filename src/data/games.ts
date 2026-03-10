@@ -72,7 +72,7 @@ export const games: Game[] = [
     id: "slice-it-all",
     name: "Slice It All",
     slug: "slice-it-all",
-    iframeUrl: "https://html5.gamedistribution.com/efa941135635400f94bdb0b7430a92f4/?gdpr-targeting=1&gd_sdk_referrer_url=https://www.play123.com/game/slice-it-all",
+    iframeUrl: "/games/slice-it-all.html",
     category: "arcade",
     coverUrl: sliceItAllImg,
     description: "Play Slice It All free online — a satisfying physics-based slicing game where your blade flies through the air cutting everything! Time your taps perfectly to flip and slice through objects, earning coins and unlocking new blades. This addictive free slicing game features smooth physics and endless replayability. Play Slice It All unblocked in your browser!",
