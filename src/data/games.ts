@@ -315,7 +315,7 @@ export const games: Game[] = [
     id: "my-little-pony-vine-slicer",
     name: "My Little Pony Vine Slicer",
     slug: "my-little-pony-vine-slicer",
-    iframeUrl: "https://st.8games.net/lib/ruffle/?game=https://st.8games.net/15/1/vine_slicer.swf",
+    iframeUrl: "/games/my-little-pony-vine-slicer.html",
     category: "character",
     coverUrl: ponySlicerImg,
     description: "Play My Little Pony Vine Slicer free online — help your favorite ponies slice through magical vines! Join the ponies in this enchanted garden adventure where you cut vines to clear the path. This free character slicing game features beloved pony characters. Play unblocked!",
