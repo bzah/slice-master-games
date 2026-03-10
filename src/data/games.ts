@@ -144,7 +144,7 @@ export const games: Game[] = [
     id: "cake-slice-ninja",
     name: "Cake Slice Ninja",
     slug: "cake-slice-ninja",
-    iframeUrl: "https://st.8games.net/10/igra-narezaj-pirozhnye-kak-nindzya/",
+    iframeUrl: "/games/cake-slice-ninja.html",
     category: "fruit-slicing",
     coverUrl: cakeSliceNinjaImg,
     description: "Play Cake Slice Ninja free online — cut cakes and pastries with ninja precision! Slice through flying desserts including cupcakes, layer cakes, and donuts. This delicious free slicing game combines sweet treats with fast-paced blade action. Play unblocked and free in your browser!",
