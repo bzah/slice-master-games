@@ -333,7 +333,7 @@ export const games: Game[] = [
     id: "tom-and-jerry-raketenmaus",
     name: "Tom and Jerry: Raketenmaus",
     slug: "tom-and-jerry-raketenmaus",
-    iframeUrl: "https://st.8games.net/7/igra-dzherri-i-raketnyj-ranets/",
+    iframeUrl: "/games/tom-and-jerry-raketenmaus.html",
     category: "character",
     coverUrl: tomJerryImg,
     description: "Play Tom and Jerry: Raketenmaus free online — the classic cat and mouse duo in a rocket-powered adventure! Help Jerry dodge and slice through obstacles while Tom gives chase. This free character action game features the beloved cartoon rivals. Play unblocked in your browser!",
