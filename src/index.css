@@ -73,15 +73,3 @@
   }
 }
 
-/* Disable hover effects on touch devices for game cards */
-@media (hover: none) {
-  .group:hover .game-card-image {
-    opacity: 1;
-  }
-  .group:hover .game-card-desc {
-    opacity: 0;
-  }
-  .group:hover .slice-line {
-    transform: translate(-200%, -50%) rotate(45deg);
-  }
-}
