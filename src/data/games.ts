@@ -252,7 +252,7 @@ export const games: Game[] = [
     id: "jelly-slices",
     name: "Jelly Slices",
     slug: "jelly-slices",
-    iframeUrl: "https://st.8games.net/10/igra-zhelejnye-kusochki/",
+    iframeUrl: "/games/jelly-slices.html",
     category: "puzzle",
     coverUrl: jellySlicesImg,
     description: "Play Jelly Slices free online — a satisfying puzzle game where you slice wobbly jelly into equal pieces! Plan your cuts carefully to divide each colorful jelly perfectly. This relaxing free puzzle slicing game features beautiful visuals and brain-teasing levels. Play unblocked!",
