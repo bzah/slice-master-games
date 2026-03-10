@@ -117,7 +117,7 @@ export const games: Game[] = [
     id: "samurai-slash-3d",
     name: "Samurai Slash 3D",
     slug: "samurai-slash-3d",
-    iframeUrl: "https://st.8games.net/10/igra-samuraj-slesh/",
+    iframeUrl: "/games/samurai-slash-3d.html",
     category: "ninja-action",
     coverUrl: samuraiSlashImg,
     description: "Play Samurai Slash 3D free online — step into the role of a master samurai! Slash through enemies with precise 3D katana strikes and experience cinematic combat. This free action slicing game features stunning 3D graphics and satisfying sword gameplay you can play in your browser.",
