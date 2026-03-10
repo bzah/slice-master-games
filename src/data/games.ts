@@ -180,7 +180,7 @@ export const games: Game[] = [
     id: "sushi-slice",
     name: "Sushi Slice",
     slug: "sushi-slice",
-    iframeUrl: "https://st.8games.net/10/igra-narezka-sushi/",
+    iframeUrl: "/games/sushi-slice.html",
     category: "fruit-slicing",
     coverUrl: sushiSliceImg,
     description: "Play Sushi Slice free online — master the art of Japanese sushi preparation! Cut fish, rolls, and ingredients with precision to create perfect sushi. This free slicing game features beautiful Japanese-themed visuals and satisfying knife mechanics. Play free and unblocked!",
