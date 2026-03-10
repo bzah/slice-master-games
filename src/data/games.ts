@@ -90,7 +90,7 @@ export const games: Game[] = [
     id: "slide-down",
     name: "Slide Down",
     slug: "slide-down",
-    iframeUrl: "https://1games.io/game/slide-down/",
+    iframeUrl: "/games/slide-down.html",
     category: "arcade",
     coverUrl: slideDownImg,
     description: "Play Slide Down free online — a thrilling arcade game where you slide and cut through colorful obstacles! Navigate your way down through increasingly challenging levels, slicing through barriers and collecting rewards. This fast-paced free browser game tests your reflexes and timing skills.",
