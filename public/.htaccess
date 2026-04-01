@@ -1,0 +1,25 @@
+RewriteEngine On
+
+# Force HTTPS
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# Remove www (redirect to non-www)
+RewriteCond %{HTTP_HOST} ^www\.slice-master\.us$ [NC]
+RewriteRule ^(.*)$ https://slice-master.us/$1 [L,R=301]
+
+# Remove trailing slashes (except root /)
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_URI} (.+)/$
+RewriteRule ^ %1 [L,R=301]
+
+# Block old WordPress URLs — return 410 Gone
+RewriteRule ^wp-admin(.*)$ - [G,L]
+RewriteRule ^wp-login\.php(.*)$ - [G,L]
+RewriteRule ^wp-content(.*)$ - [G,L]
+RewriteRule ^xmlrpc\.php(.*)$ - [G,L]
+
+# SPA fallback — serve index.html for any route that doesn't match a real file or directory
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^ /index.html [L]
